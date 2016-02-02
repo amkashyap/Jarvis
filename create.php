@@ -1,4 +1,4 @@
-<?php
+<?php edit
 
 include 'connection.php';
 
