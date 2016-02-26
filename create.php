@@ -8,7 +8,7 @@ $r = $_POST['regression'];
 $i = $_POST['instructions'];
 
 if(!$_POST['submit']) {
- echo "kindly fill out the form";
+ echo "please fill out the form";
   header('Location: ca.html');
 }
 else {
