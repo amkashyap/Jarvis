@@ -40,11 +40,14 @@ form {
  <h1>Create Daily Assignment</h1> 
 <form method="POST" action='create.php'>
  
-<b><h3>Assignor Name</b> <input type="text" name="assignor" value=""></h3><br> <br> 
+<b><h3>Date</b> <input type="text" name="date" value="<?php
+echo date("m/d/y") ?>"
+></h3><br> <br> 
 
 <b> Environment </b> 
 <select name=myenvironment>
-<option name=qad value=one selected > QAD </option>
+<option value=zero selected> Please select</option>
+<option name=qad value=one > QAD </option>
 <option name=staging value=two > Staging </option>
 <option name=production value=three> Production </option>
 </select>
@@ -53,6 +56,7 @@ form {
   
 <b> Task </b>
 <select name=mytask >
+<option value=zero selected> Please select</option>
 <option name=regression value=one> Regression </option>
 <option name=smoke value=two > Smoke </option>
 <option name=bcc value=three > BCC </option>
@@ -63,6 +67,7 @@ form {
 
 <b> Features </b>
 <select name=myfeatures >
+<option value=zero selected> Please select</option>
 <option name=Roles value=one> Roles and Permissions </option>
 <option name=Dashboard value=two > Dashboard </option>
 <option name=LPN value=three > LPN </option>
@@ -99,6 +104,7 @@ form {
 
 <b> Assignee </b> &nbsp&nbsp&nbsp&nbsp
 <select name=assignee >
+<option value=zero selected> Please select</option>
 <option name=amit value=one> Amit </option>
 <option name=krati value=two > Krati </option>
 <option name=ritesh value=three > Ritesh </option>
@@ -106,14 +112,16 @@ form {
 <option name=parvez value=four> Parvez </option>
 </select> <br> <br>
 
-<b>JiraID</b>  <input type="text" name="jiraid" value=""> &nbsp &nbsp <input type="submit" name="add" value="ADD">   <br> <br>
+<b>JiraID</b>  <input type="text" name="jiraid" value=""> &nbsp &nbsp <input type="submit" name="add" value="ADD" action="<?php 
+$_POST['jiraid'] ?>" <br/> <br>
 
 
 
+<b>Ticket Basket</b> <br><textarea rows="10" cols="50" maxlength="10000" name="ticketbasket" value="<?php $_POST['add'] ?>"> </textarea><br>
 
 <b>Instructions</b> <br><textarea rows="10" cols="50" maxlength="1000" name="instructions"></textarea><br>
 
  <input type="submit" name="submit" value="Generate Assignment"> </form> 
 
  </body>
- </html>
+ </html> 

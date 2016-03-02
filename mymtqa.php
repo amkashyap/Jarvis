@@ -182,7 +182,7 @@ bordercolorlight="#000000" height="175">
 bordercolordark="#000000">
 <tr>
 <td width="141" height="130" valign="middle" align="center" bordercolor="#000000" bordercolorlight="#000000" 
-bordercolordark="#000000" bgcolor="#C1D5E4"><b><form method="POST" action='ca.html' target="_blank">
+bordercolordark="#000000" bgcolor="#C1D5E4"><b><form method="POST" action="cas.php" target="_blank">
 <input type="submit" name="button1"  value="Create Assignment">
 </form></b></td>
 
